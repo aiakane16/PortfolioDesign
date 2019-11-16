@@ -1,0 +1,45 @@
+
+$mediumcrimson-color: #C93756;
+$ibiswing-color: #F58F84;
+$saffron-color: #F4D03F;
+
+$navbar-background-color: $mediumcrimson-color;
+
+.navbar {
+    align-items: center;
+    background-color: $navbar-background-color;
+    height: 50px;
+    width: 100%;
+    border-bottom: 3px solid $ibiswing-color;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+
+    .navbar-content { 
+        width: 100%;
+        max-width:1200px;
+        text-align: left;
+
+        .navbar-item {
+            align-content: center;
+            justify-content: center;
+            color : white;
+            margin: 0px 30px;
+            text-transform: uppercase;
+
+            .active {
+                color: $saffron-color;
+                cursor: pointer;
+            }
+        }
+
+        .navbar-item:hover {
+            color: $saffron-color;
+            transition: color .5s;
+            cursor: pointer;
+        }
+
+
+    }
+    
+}

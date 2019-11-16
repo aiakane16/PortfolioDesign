@@ -1,0 +1,19 @@
+
+
+.section {
+    padding: 40px 0px;
+    .section-title {
+        font-family: 'Raleway';
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 30pt;
+    }
+
+    .section-title-bar {
+        font-size: 12pt;
+        width:70px;
+        height:5px;
+        background-color:black;
+        margin: 20px 0px;
+    }
+}

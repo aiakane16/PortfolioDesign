@@ -1,0 +1,46 @@
+{
+  "name": "portfoliodesign",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --public 0.0.0.0:3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiakane16/PortfolioDesign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aiakane16/PortfolioDesign/issues"
+  },
+  "homepage": "https://github.com/aiakane16/PortfolioDesign#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "bulma": "^0.8.0",
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "path": "^0.12.7",
+    "sass": "^1.23.3",
+    "sass-loader": "^8.0.0",
+    "scss-loader": "0.0.1",
+    "style-loader": "^1.0.0",
+    "waypoints": "^4.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "pts": "^0.8.11"
+  }
+}
