@@ -63,59 +63,47 @@ $(document).ready(function(){
     element: document.getElementById('checkpoint-1'),
     handler: function(direction) {
       if(direction === 'down'){
-        $('#checkpoint-1').addClass('is-fixed-top navbar-attached');
+        $('#checkpoint-1').addClass('is-fixed-top');
       }else{
-        $('#checkpoint-1').removeClass('is-fixed-top navbar-attached');
-      }
-    }
-  })
-  
-  new Waypoint({
-    element: document.getElementById('checkpoint-3'),
-    handler: function(direction) {
-      if(direction === 'down'){
-       document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
-      }else{
-       document.getElementById('checkpoint-1').setAttribute('style','')
-      }
-    }
-  })
-  
-  new Waypoint({
-    element: document.getElementById('checkpoint-4'),
-    handler: function(direction) {
-      if(direction === 'down'){
-       document.getElementById('checkpoint-1').setAttribute('style','')
-      }else{
-       document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
+        $('#checkpoint-1').removeClass('is-fixed-top ');
       }
     }
   })
 
-  var speed = 700;
+  new Waypoint({
+    element: document.getElementById('checkpoint-2-waypoint'),
+    handler: function(direction) {
+      $('#checkpoint-2').addClass('animated').addClass('slide-in-left')
+    }
+  })
   
-  window.smoothScroll = function(target) {
-      var scrollContainer = target;
-      do { //find scroll container
-          scrollContainer = scrollContainer.parentNode;
-          if (!scrollContainer) return;
-          scrollContainer.scrollTop += 1;
-      } while (scrollContainer.scrollTop == 0);
-      
-      var targetY = 0;
-      do { //find the top of target relatively to the container
-          if (target == scrollContainer) break;
-          targetY += target.offsetTop;
-      } while (target = target.offsetParent);
-      
-      scroll = function(c, a, b, i) {
-          i++; if (i > 30) return;
-          c.scrollTop = a + (b - a) / 30 * i;
-          setTimeout(function(){ scroll(c, a, b, i); }, 1);
+  new Waypoint({
+    element: document.getElementById('checkpoint-3-waypoint'),
+    handler: function(direction) {
+      if(direction === 'down'){
+       document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
+      }else{
+       document.getElementById('checkpoint-1').setAttribute('style','')
       }
-      // start scrolling
-      scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-  }
+
+      $('#checkpoint-3').addClass('animated').addClass('slide-in-left')
+    }
+  })
+  
+  new Waypoint({
+    element: document.getElementById('checkpoint-4-waypoint'),
+    handler: function(direction) {
+      if(direction === 'down'){
+       document.getElementById('checkpoint-1').setAttribute('style','')
+      }else{
+       document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
+      }
+
+      $('#checkpoint-4').addClass('animated').addClass('slide-in-left')
+    }
+  })
+
+  var speed = 500;
   
   $('.home').on('click',function(){
     $('html, body').animate({

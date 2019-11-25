@@ -50,5 +50,20 @@ body {
 .invert {
     background: hsl(0, 0%, 96%);
 }
+
+.unanimated {
+    opacity: 0;
+}
     
+.animated.slide-in-left {
+    animation: slideInLeft .75s ease both;
+}
+
+@keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px); }
+    100% {
+      opacity: 1;
+      transform: translateX(0); } }
     
