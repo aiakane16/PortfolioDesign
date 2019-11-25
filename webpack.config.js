@@ -1,6 +1,8 @@
-const path = require('path');
+const path = require('path')
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -42,7 +44,12 @@ module.exports = {
                     'style-loader','css-loader'
                 ]
             },
-            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+            { 
+                test: /\.js$/, 
+                exclude: /node_modules/, 
+                loader: "babel-loader" 
+            },
+           
         ]
     },
     plugins: [
@@ -51,6 +58,13 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template : './src/index.html'
-        })
+        }),
+        new CopyPlugin([
+            {
+                from : './src/assets', 
+                to: './assets'
+            }
+        ]),
+        new webpack.ProvidePlugin({$: 'jquery', jQuery: 'jquery' }),
     ]
 }
