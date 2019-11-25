@@ -1,0 +1,35 @@
+$background: #8FB9A8;
+    
+.custom-navbar 
+    @extend .navbar
+    justify-content: center
+    align-content: center  
+    background-color: $background 
+    border-bottom: 4px solid #FCD0BA 
+
+.navbar-container
+    width: 100%
+    max-width: 1200px
+    justify-content: center
+    align-content: center
+    align-items: center
+
+.custom-navbar-menu
+    @extend .navbar-menu
+    height: 100%
+
+.custom-navbar-item
+    @extend .navbar-item
+    color: #FEFAD4 
+    padding: 0 20px
+    -webkit-text-stroke: 0.015em #ffffff
+
+.custom-navbar-item:hover
+    @extend .navbar-item:hover
+    background-color: $background !important
+    transition: color .5s
+
+
+
+
+

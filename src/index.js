@@ -1,15 +1,38 @@
-require('./scss/style.scss')
-require('waypoints/lib/noframework.waypoints.min.js')
+import './theme/base.sass'
+import $ from "jquery"
+import 'waypoints/lib/noframework.waypoints.min.js'
 import { World, Particle, CanvasSpace, Pt, Group, Rectangle, Num, Circle, Triangle, Line, Create} from "pts"
 
 var waypoint = new Waypoint({
   element: document.getElementById('checkpoint-1'),
   handler: function(direction) {
     if(direction === 'down'){
-     document.getElementById('checkpoint-1').setAttribute('class','navbar is-fixed-top navbar-attached')
+     document.getElementById('checkpoint-1').setAttribute('class','custom-navbar is-fixed-top navbar-attached')
     }else{
-     document.getElementById('checkpoint-1').setAttribute('class','navbar ')
+     document.getElementById('checkpoint-1').setAttribute('class','custom-navbar ')
 
+    }
+  }
+})
+
+var waypoint = new Waypoint({
+  element: document.getElementById('checkpoint-3'),
+  handler: function(direction) {
+    if(direction === 'down'){
+     document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
+    }else{
+     document.getElementById('checkpoint-1').setAttribute('style','')
+    }
+  }
+})
+
+var waypoint = new Waypoint({
+  element: document.getElementById('checkpoint-4'),
+  handler: function(direction) {
+    if(direction === 'down'){
+     document.getElementById('checkpoint-1').setAttribute('style','')
+    }else{
+     document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
     }
   }
 })
@@ -54,7 +77,7 @@ document.getElementById('project-1-close').addEventListener('click',function(){
 
 function rainDrops(){
 
-var space = new CanvasSpace("#introduction").setup({ bgcolor: "#F58F84" });
+var space = new CanvasSpace("#introduction").setup({ bgcolor: "#765D69" });
     var form = space.getForm();
 
     var angle = -(window.innerWidth * 0.5);
@@ -84,7 +107,7 @@ var space = new CanvasSpace("#introduction").setup({ bgcolor: "#F58F84" });
 
     animate: (time, ftime) => {
       world.drawParticles( (p, i) => {
-        let color = (i===0) ? "#fff" : ["#ff2d5d", "#42dc8e", "#2e43eb", "#ffe359"][i%4];
+        let color = (i===0) ? "#fff" : ["#8FB9A8", "#FEFAD4", "#FCD0BA", "#F1828D"][i%4];
         form.fillOnly( color ).point( p, p.radius, "circle" ) 
       });
 

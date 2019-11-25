@@ -41,6 +41,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "jQuery": "^1.7.4",
     "pts": "^0.8.11"
   }
 }
