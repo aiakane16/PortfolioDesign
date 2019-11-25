@@ -76,29 +76,39 @@ $(document).ready(function(){
       $('#checkpoint-2').addClass('animated').addClass('slide-in-left')
     }
   })
-  
+
   new Waypoint({
-    element: document.getElementById('checkpoint-3-waypoint'),
+    element: document.getElementById('checkpoint-3'),
     handler: function(direction) {
       if(direction === 'down'){
        document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
       }else{
        document.getElementById('checkpoint-1').setAttribute('style','')
       }
-
-      $('#checkpoint-3').addClass('animated').addClass('slide-in-left')
     }
   })
   
   new Waypoint({
-    element: document.getElementById('checkpoint-4-waypoint'),
+    element: document.getElementById('checkpoint-3-waypoint'),
+    handler: function(direction) {
+      $('#checkpoint-3').addClass('animated').addClass('slide-in-left')
+    }
+  })
+
+  new Waypoint({
+    element: document.getElementById('checkpoint-4'),
     handler: function(direction) {
       if(direction === 'down'){
        document.getElementById('checkpoint-1').setAttribute('style','')
       }else{
        document.getElementById('checkpoint-1').setAttribute('style','border-bottom: 4px solid #8A4D76;')
       }
+    }
+  })
 
+  new Waypoint({
+    element: document.getElementById('checkpoint-4-waypoint'),
+    handler: function(direction) {
       $('#checkpoint-4').addClass('animated').addClass('slide-in-left')
     }
   })
